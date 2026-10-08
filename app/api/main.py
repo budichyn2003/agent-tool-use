@@ -1,0 +1,1 @@
+"""Aplikasi FastAPI: mendaftarkan router."""

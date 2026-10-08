@@ -1,0 +1,41 @@
+[project]
+name = "agent-tool-use"
+version = "0.1.0"
+description = "AI Agent dengan Tool Use (PRD 3)"
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+dependencies = [
+    "alembic>=1.20.0",
+    "anthropic>=1.12.1",
+    "asyncpg>=0.32.0",
+    "fastapi>=0.143.0",
+    "httpx>=0.28.1",
+    "pydantic>=2.14.0",
+    "pydantic-settings>=2.15.0",
+    "python-dotenv>=1.2.4",
+    "sqlalchemy[asyncio]>=2.0.54",
+    "streamlit>=1.65.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "ruff>=0.16.10",
+]

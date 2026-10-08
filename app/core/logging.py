@@ -1,0 +1,1 @@
+"""Konfigurasi logging terstruktur."""
